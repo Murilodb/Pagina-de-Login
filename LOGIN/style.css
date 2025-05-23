@@ -1,150 +1,148 @@
+:root {
+  --main-bg: rgb(26, 25, 25);
+  --input-bg: #000;
+  --input-border: rgba(255, 255, 255, 0.2);
+  --text-color: #fff;
+  --placeholder-color: rgb(190, 189, 189);
+  --line-color: rgb(68, 67, 67);
+  --primary-btn: rgb(52, 80, 203);
+  --primary-btn-hover: rgb(39, 59, 151);
+  --social-hover: rgb(204, 204, 204);
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: url(img/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(img/background.jpg) no-repeat center/cover;
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
-    width: 420px; /* aumentada de 420px para 520px */
-    background-color: rgb(26, 25, 25);
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 10px;
-    color: white;
-    padding: 50px 60px; 
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    backdrop-filter: blur(10px);
+  width: 420px;
+  background-color: var(--main-bg);
+  border: 2px solid var(--input-border);
+  border-radius: 10px;
+  padding: 50px 60px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .container h1 {
-    font-size: 50px;
-    font-family: 'Popping', sans-serif;
-    text-align: center;
+  font-size: 50px;
+  text-align: center;
 }
+
 .container p {
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: rgb(190, 189, 189);;
+  font-size: 18px;
+  margin: 10px 0 20px;
+  text-align: center;
+  color: var(--placeholder-color);
 }
-.container p a{
-    font-weight: bold;
-    color: #fff;
+
+.container p a {
+  font-weight: bold;
+  color: var(--text-color);
 }
 
 .input-box {
-    position: relative;
-}
-.input-box input{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 10px 0;
+  position: relative;
+  margin: 10px 0;
 }
 
 .input-box input {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 40px;
-    outline: none;
-    font-size: 16px;
-    color: #fff;
-    padding: 20px 45px 20px 20px;
+  width: 100%;
+  height: 50px;
+  background-color: var(--input-bg);
+  border: 2px solid var(--input-border);
+  border-radius: 40px;
+  outline: none;
+  font-size: 16px;
+  color: var(--text-color);
+  padding: 0 45px 0 20px;
 }
 
 .input-box input::placeholder {
-    color: rgb(190, 189, 189);
+  color: var(--placeholder-color);
 }
 
 .input-box i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white; /* opcional, mas melhora a visibilidade */
-    pointer-events: none; /* impede que o clique interfira no input */
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-color);
+  pointer-events: none;
 }
 
-.login .btn-submit{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex-direction: column;
-    margin-top: 20px;
-}
-.login .btn-submit .btn-login {
-    font-size: larger;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    width: 150px;
-    height: 50px;
-    background: rgb(52, 80, 203);
-    transition: all;
-    transition-property: background, width, height;
-    transition-duration: .1s;
+.btn-submit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.login .btn-submit .btn-login:hover {
-    width: 160px;
-    height: 60px;
-    font-size: 20px;
-    background: rgb(39, 59, 151);
-    transition-property: background, width, height;
-    transition-duration: .1s;
+.btn-login {
+  width: 150px;
+  height: 50px;
+  font-size: 1rem;
+  color: var(--text-color);
+  border: none;
+  border-radius: 20px;
+  background: var(--primary-btn);
+  transition: all 0.1s ease;
 }
 
-
- .socialmedia img{
-    width: 15px;
-    height: 15px;
+.btn-login:hover {
+  width: 160px;
+  height: 60px;
+  font-size: 1.25rem;
+  background: var(--primary-btn-hover);
 }
 
-.container .socialmedia{
-    display: flex;
-    font-size: larger;    
-    gap: 1em;
+.socialmedia {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  font-size: larger;
 }
 
-.container .socialmedia .submit{
-    width: 300px;
-    height: 50px;
-    border-radius: 20px;
-    border: none;
-    background: #fff;
-    transition-property: background, width, height;
-    transition-duration: .1s;
+.socialmedia .submit {
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background: #fff;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container .socialmedia .submit:hover{
-    width: 400px;
-    height: 60px;
-    background: rgb(204, 204, 204);
-    transition-property: background, width, height;
-    transition-duration: .1s;
+.socialmedia .submit:hover {
+  width: 400px;
+  height: 60px;
+  background: var(--social-hover);
 }
 
-.container .login .line{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 200;
-    height: 1px;
-    background-color: rgb(68, 67, 67);
+.socialmedia img {
+  width: 15px;
+  height: 15px;
+}
+
+.line {
+  margin: 40px 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--line-color);
 }
